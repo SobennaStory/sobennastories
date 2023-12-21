@@ -10,7 +10,12 @@ const TAB_DATA = [
         id: "skills",
         content: (
             <ul className='list-disc pl-2'>
-                <li>Insert skills</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>C++/C/C#</li>
+                <li>Html</li>
             </ul>
         )
     },
@@ -19,7 +24,7 @@ const TAB_DATA = [
         id: "education",
         content: (
             <ul className='list-disc pl-2'>
-                <li>Vanderbilt University</li>
+                <li>Vanderbilt University - 2026</li>
             </ul>
         )
     },
@@ -28,7 +33,7 @@ const TAB_DATA = [
         id: "certifications",
         content: (
             <ul className='list-disc pl-2'>
-                <li>Insert certifications</li>
+                <li>N/A</li>
             </ul>
         )
     }
@@ -48,10 +53,12 @@ const AboutSection = () => {
     return (
         <section className='text-white'>
             <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
-                <Image src="/images/steampunklandscape.jpg" alt="About Image" width={500} height = {500} />
-                <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
+                {/*<Image src="/images/steampunklandscape.jpg" alt="About Image" width={500} height = {500} />
+                */}<div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                     <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-                    <p className="text-base md:text-lg">A description of me. I am blah blah blah blah and blah blah blah blah and blah blah blah blah and blah blah blah blah and blah blah and blah blah blah  blah blah bal</p>
+                    <p className="text-base md:text-lg">
+                        I am Sobenna. A computer science student currently studying at Vanderbilt University. I believe greatly in the power of creativity, and hope to breathe that life into my projects!
+                    </p>
                     <div className='flex flex-row justify-start mt-8'>
                         <TabButton 
                             selectTab={() => handleTabChange("skills")} 

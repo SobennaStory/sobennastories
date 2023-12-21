@@ -1,13 +1,13 @@
 import React from 'react'
-
+import { LogoImage } from '../../../public/svgs'
 const Footer = () => {
   return (
     <footer className='footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white'>
         <div className='container p-12 flex justify-between'>
             <span>
-                LOGO
+                <LogoImage/>
             </span>
-            <p className='text-slate-800'> 
+            <p className='text-slate-300 font-bold'> 
                 ALL RIGHTS RESERVED
             </p>
         </div>

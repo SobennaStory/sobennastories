@@ -1,8 +1,8 @@
 "use client";
 
 import React, {useState} from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedInIcon from "../../../public/linkedin-icon.svg";
+import {GithubIcon} from '../../../public/svgs';
+import {LinkedInIcon} from '../../../public/svgs';
 import Link from "next/link";
 import Image from "next/image";
 
@@ -37,22 +37,15 @@ const EmailSection = () => {
 }
   return (
     <section className="grid md:grid-cols-2 my-12 relative md:my-12 py-24 gap-4">
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let&apos;s connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md"> I&apos;m looking for WORK</p>
+        <h5 className="text-xl font-bold text-white my-2">Please reach out!</h5>
+        <p className="text-[#ADB7BE] mb-4 max-w-md"> Fill in relevant information below. </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/SobennaStory">
-            <Image
-              src={GithubIcon}
-              alt="GitHubIcon"
-            />
+            <GithubIcon/>
           </Link>
           <Link href="www.linkedin.com/in/sobenna">
-            <Image
-              src={LinkedInIcon}
-              alt="LinkedInIcon"
-            />
+            <LinkedInIcon/>
           </Link>
         </div>
       </div>
