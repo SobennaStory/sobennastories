@@ -7,7 +7,7 @@ const Footer = () => {
             <span>
                 <LogoImage/>
             </span>
-            <p className='text-slate-300 font-bold'> 
+            <p className='text-primary-600 text-xs'> 
                 ALL RIGHTS RESERVED
             </p>
         </div>

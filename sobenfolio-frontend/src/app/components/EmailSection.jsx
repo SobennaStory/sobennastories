@@ -36,10 +36,10 @@ const EmailSection = () => {
   };
 }
   return (
-    <section className="grid md:grid-cols-2 my-12 relative md:my-12 py-24 gap-4">
-      <div className="z-10">
+    <section id = 'contact' className="grid md:grid-cols-2 my-12 relative md:my-12 py-24 gap-4">
+      <div >
         <h5 className="text-xl font-bold text-white my-2">Please reach out!</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md"> Fill in relevant information below. </p>
+        <p className="text-[#ADB7BE] mb-4 max-w-md"> Fill in relevant information. </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/SobennaStory">
             <GithubIcon/>
