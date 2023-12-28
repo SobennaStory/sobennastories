@@ -1,10 +1,48 @@
 "use client";
 
 import React, {useState} from "react";
-import {GithubIcon} from '../../../public/svgs';
+import {Github8BitIcon, GithubIcon, LinkedIn8BitIcon} from '../../../public/svgs';
 import {LinkedInIcon} from '../../../public/svgs';
 import Link from "next/link";
 import Image from "next/image";
+import { Orbitron, Press_Start_2P, Pixelify_Sans } from 'next/font/google';
+import { motion } from "framer-motion";
+
+
+
+
+
+
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+});
+
+const presstart = Press_Start_2P({
+  subsets: ['latin'],
+  weight: '400',
+});
+
+const pixel = Pixelify_Sans({
+  subsets: ['latin'],
+});
+
+const shakeAnimation = {
+  hover: { x: [0, -10, 10, -10, 10, 0] },
+};
+
+const SocialIcon = ({ href, children }) => (
+  <Link href={href}>
+    <motion.div
+      className="cursor-pointer"
+      whileHover="hover"
+      variants={shakeAnimation}
+    >
+      {children}
+    </motion.div>
+  </Link>
+);
+
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -37,25 +75,26 @@ const EmailSection = () => {
 }
   return (
     <section id = 'contact' className="grid md:grid-cols-2 my-12 relative md:my-12 py-24 gap-4">
-      <div >
-        <h5 className="text-xl font-bold text-white my-2">Please reach out!</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md"> Fill in relevant information. </p>
+      <div className="flex items-center justify-center">
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/SobennaStory">
-            <GithubIcon/>
-          </Link>
-          <Link href="https://www.linkedin.com/in/sobenna">
-            <LinkedInIcon/>
-          </Link>
+          <SocialIcon href="https://github.com/SobennaStory">
+            <Github8BitIcon />
+          </SocialIcon>
+          <SocialIcon href="https://www.linkedin.com/in/sobenna">
+            <LinkedIn8BitIcon />
+          </SocialIcon>
         </div>
       </div>
       <div>
+          <h2 className={`${pixel.className} text-4xl text-center text-white mt-4`}>
+            Write to Me
+          </h2>
         <form className="flex flex-col" onSubmit={handleSubmit}>
         <div className="mb-6">
             <label
               htmlFor="email"
               type="email"
-              className="text-white mb-2 block text-sm font-medium"
+              className={`${orbitron.className} text-white mb-2 block text-sm `}
             >
               Your Email
             </label>
@@ -72,7 +111,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="subject"
-              className="text-white mb-2 block text-sm font-medium"
+              className={`${orbitron.className} text-white mb-2 block text-sm `}
             >
               Subject
             </label>
@@ -89,7 +128,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="text-white mb-2 block text-sm font-medium"
+              className={`${orbitron.className} text-white mb-2 block text-sm`}
             >
               Message
             </label>
@@ -104,12 +143,12 @@ const EmailSection = () => {
 
           <button
             type="submit"
-            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full">
+            className={`${orbitron.className} bg-primary-500 hover:bg-primary-600 text-white  py-2.5 px-5 rounded-lg w-full`}>
               Send Message
           </button>
           {
             emailSubmitted && (
-              <p className="text-green-500 text-sm mt-2">
+              <p className={`${orbitron.className} text-green-500 text-sm mt-2`}>
                 Email Sent Succesfully!
               </p>
             )
