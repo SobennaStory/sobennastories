@@ -38,7 +38,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className='list-disc pl-2'>
-        <li>Vanderbilt University - (2022-2026) Bachelor's in CS</li>
+        <li>Vanderbilt University - (2022-2026) Bachelor&apos;s in CS</li>
       </ul>
     ),
   },
