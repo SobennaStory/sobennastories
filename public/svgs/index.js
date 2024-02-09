@@ -1,0 +1,5 @@
+export {default as LogoImage} from './Logo.svg'
+export {default as GithubIcon} from './github-icon.svg'
+export {default as LinkedInIcon} from './linkedin-icon.svg'
+export {default as LinkedIn8BitIcon} from './linkedin8bit.svg'
+export {default as Github8BitIcon} from './github8bit.svg'
