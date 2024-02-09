@@ -4,6 +4,8 @@ import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Press_Start_2P, Pixelify_Sans } from "next/font/google";
+import './ellipse.css'
+
 const presstart = Press_Start_2P({   
     subsets: ['latin'],
     weight: '400', 
@@ -80,7 +82,9 @@ function Parallax() {
                 <img ref={backlayer} className='absolute w-[100%] z-[21] bottom-[-1000px]' src="/images/bgpics/layer-3.svg" />
                 <div ref={copy} className="absolute bottom-[0%] left-[50%] transform translate-x-[-50%] translate-y-[200%]  z-[24] flex justify-center items-center text-center flex-col opacity-0">
                     <h1 className={`${presstart.className} text-[#FFFDD0] text-6xl`}>Sobenna Onwumelu</h1>
-                    <span className={`${pixel.className} p-[1rem] rounded-[0.5rem] `}>Now Loading..</span>
+                    <span className={`${pixel.className} p-[1rem] rounded-[0.5rem] `}>
+                        <span className="loading">Now Loading</span>
+                    </span>
                 </div>
             </div>
         </div>

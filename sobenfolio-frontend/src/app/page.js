@@ -22,8 +22,8 @@ export default function Home() {
         <AchievmentsSection />
         I have no achievments
             */}
-        <AboutSection />
         <ProjectsSection />
+        <AboutSection />
         <EmailSection />
       </div>
       <Footer />

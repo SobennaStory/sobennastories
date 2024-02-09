@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { WrenchIcon } from "@heroicons/react/24/solid";
+import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/solid'
 import { Orbitron, Press_Start_2P, Pixelify_Sans } from 'next/font/google';
 
 
@@ -65,6 +66,19 @@ const projectsData = [
       '/images/projects/Ekreb3.png'
     ]
   },
+  {
+    id: 4,
+    title: "SobStore",
+    description: "A inventory management app. Only frontend. Does not persist between reloads.",
+    image: "/images/projects/4.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://sobstore.vercel.app/",
+    projectImages : [
+      '/images/projects/sobstore1.png',
+      '/images/projects/sobstore2.png',
+      '/images/projects/sobstore3.png'
+    ]
+  },
 ];
 
 const ProjectsSection = () => {
@@ -121,7 +135,7 @@ const ProjectsSection = () => {
 
   return (
     <section id='projects'>
-      <div className="md:grid md:grid-cols-8 items-center">
+      <div className="md:grid md:grid-cols-8 items-center my-12">
         <motion.div
             whileHover="hover"
             animate={wrenchClicked ? 'click' : 'base'}
@@ -141,6 +155,12 @@ const ProjectsSection = () => {
               </h2>
             <p className={`${orbitron.className} text-[#ADB7BE] text-center text-base sm:text-lg mb-6 lg:text-xl`}>
               (Click the Wrench!)
+            </p>
+            <p className={`${orbitron.className} text-[#ADB7BE] text-center text-sm sm:text-sm mb-6 lg:text-sm`}>
+              <CodeBracketIcon className="inline-block w-8 h-8"/> To see code or project.
+            </p>
+            <p className={`${orbitron.className} text-[#ADB7BE] text-center text-sm sm:text-sm mb-6 lg:text-sm`}>
+              <EyeIcon className="inline-block w-8 h-8"/> To see fun pictures. 
             </p>
 
               <motion.div
