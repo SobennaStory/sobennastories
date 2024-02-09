@@ -79,6 +79,19 @@ const projectsData = [
       '/images/projects/sobstore3.png'
     ]
   },
+  {
+    id: 4,
+    title: "NiteVale Corp",
+    description: "A spooky valentine template made to give to a special someone.",
+    image: "/images/projects/5.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://nitevalecorp.vercel.app/",
+    projectImages : [
+      '/images/projects/nitevale.png',
+      '/images/projects/nitevale2.png',
+      '/images/projects/nitevale3.png'
+    ]
+  },
 ];
 
 const ProjectsSection = () => {
