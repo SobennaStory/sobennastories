@@ -28,25 +28,11 @@ const pixel = Pixelify_Sans({
 const projectsData = [
   {
     id: 1,
-    title: "Bandwith Battlegrounds",
-    description: "A 2D Platformer game created with Unity",
-    image: "/images/projects/1.png",
-    tag: ["All", "Game"],
-    gitUrl: "/",
-    projectImages : [
-      '/images/projects/Bandwith1.png',
-      '/images/projects/Bandwith2.png',
-      '/images/projects/Bandwith3.png',
-      '/images/projects/Bandwith4.png',
-    ]
-  },
-  {
-    id: 2,
     title: "CAN Data Visualizer",
-    description: "A Data Visualizer created with Python",
+    description: "A vehicle kinematic data visualizer, with a corresponding published paper.",
     image: "/images/projects/2.png",
     tag: ["All"],
-    gitUrl: "https://github.com/jmscslgroup/drivesummary",
+    gitUrl: "https://ieeexplore.ieee.org/abstract/document/10485592",
     projectImages : [
       '/images/projects/Datavis1.png',
       '/images/projects/Datavis2.png',
@@ -54,7 +40,7 @@ const projectsData = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: "Ekreb",
     description: "A Word-guessing game made with React and Vite.",
     image: "/images/projects/3.png",
@@ -67,12 +53,12 @@ const projectsData = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     title: "SobStore",
     description: "A inventory management app. Only frontend. Does not persist between reloads.",
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
-    gitUrl: "https://sobstore.vercel.app/",
+    gitUrl: "https://www.youtube.com/watch?v=N2jZAoTZ0oc&list=PLAqwaEpjgfVHvp4Zo8qynWMX_-8NejPwu&index=2",
     projectImages : [
       '/images/projects/sobstore1.png',
       '/images/projects/sobstore2.png',
@@ -174,6 +160,11 @@ const ProjectsSection = () => {
             </p>
             <p className={`${orbitron.className} text-[#ADB7BE] text-center text-sm sm:text-sm mb-6 lg:text-sm`}>
               <EyeIcon className="inline-block w-8 h-8"/> To see fun pictures. 
+            </p>
+            <p className={`${orbitron.className} text-[rgb(192,174,125)] text-center text-sm sm:text-sm mb-6 lg:text-sm`}>
+              <a href="https://www.youtube.com/watch?v=N7RIxD4vraM&list=PLAqwaEpjgfVHvp4Zo8qynWMX_-8NejPwu&index=1" target="_blank" rel="noopener noreferrer">
+                Click for project demos.
+              </a>
             </p>
 
               <motion.div
