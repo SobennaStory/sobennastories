@@ -24,7 +24,9 @@ export default function Home() {
             */}
         <ProjectsSection />
         <AboutSection />
+        {/*
         <EmailSection />
+        */}
       </div>
       <Footer />
     </main>

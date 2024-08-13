@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import ImageModal from './ImageModal';
 
-const ProjectCard = ({imgUrl, title, description, gitUrl, images}) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, images, tags = [], tech = [] }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
@@ -33,6 +34,40 @@ return (
         <div className='text-white rounded-b-xl mt-3 w-[100%] md:w-[50%] bg-[#302a23] py-6 px-4'>
             <h5 className='text-xl font-semibold mb-2'>{title}</h5>
             <p className="text-[#ADB7BE]">{description}</p>
+            {tags.length > 0 && (
+                    <div className="mb-2 flex items-center">
+                        <p className="text-[#c0ae7d45] font-semibold text-sm mr-2">Category:</p>
+                        <div className="flex flex-wrap gap-1">
+                            {tags.map((tag, index) => (
+                                <motion.span
+                                    key={index}
+                                    className="text-[10px] bg-[#423a2f] text-[#c0ae7d] px-1.5 py-0.5 rounded"
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                >
+                                    {tag}
+                                </motion.span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+                {tech.length > 0 && (
+                    <div className="flex items-center">
+                        <p className="text-[#c0ae7d45] font-semibold text-sm mr-2">Technologies:</p>
+                        <div className="flex flex-wrap gap-1">
+                            {tech.map((item, index) => (
+                                <motion.span
+                                    key={index}
+                                    className="text-[10px] bg-[#4b4335] text-[#d9c7a3] px-1.5 py-0.5 rounded"
+                                    whileHover={{ scale: 1.1, rotate: 5 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                >
+                                    {item}
+                                </motion.span>
+                            ))}
+                        </div>
+                    </div>
+                )}
         </div>
     </div>
   )

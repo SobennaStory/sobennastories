@@ -28,15 +28,16 @@ const pixel = Pixelify_Sans({
 const projectsData = [
   {
     id: 1,
-    title: "CAN Data Visualizer",
-    description: "A vehicle kinematic data visualizer, with a corresponding published paper.",
-    image: "/images/projects/2.png",
-    tag: ["All"],
-    gitUrl: "https://ieeexplore.ieee.org/abstract/document/10485592",
+    title: "CONCRETE",
+    description: "A 2d pixel art survivor-like. Public DEMO Spring 2025.",
+    image: "/images/projects/6.png",
+    tag: ["Game"],
+    tech: ["C++", "SFML", "Aseprite", "Json", "LLMS", "Audacity"],
+    gitUrl: "https://nitevalecorp.vercel.app/",
     projectImages : [
-      '/images/projects/Datavis1.png',
-      '/images/projects/Datavis2.png',
-      '/images/projects/Datavis3.png'
+      '/images/projects/Concrete1.png',
+      '/images/projects/Concrete2.png',
+      '/images/projects/Concrete3.png'
     ]
   },
   {
@@ -44,11 +45,11 @@ const projectsData = [
     title: "Ekreb",
     description: "A Word-guessing game made with React and Vite.",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    tag: ["Web"],
+    tech: ["React", "Vite.js"],
     gitUrl: "https://github.com/SobennaStory/ekreb",
     projectImages : [
       '/images/projects/Ekreb1.png',
-      '/images/projects/Ekreb2.png',
       '/images/projects/Ekreb3.png'
     ]
   },
@@ -57,7 +58,8 @@ const projectsData = [
     title: "SobStore",
     description: "A inventory management app. Only frontend. Does not persist between reloads.",
     image: "/images/projects/4.png",
-    tag: ["All", "Web"],
+    tag: ["Web"],
+    tech: ["React", "Next.js"],
     gitUrl: "https://www.youtube.com/watch?v=N2jZAoTZ0oc&list=PLAqwaEpjgfVHvp4Zo8qynWMX_-8NejPwu&index=2",
     projectImages : [
       '/images/projects/sobstore1.png',
@@ -68,9 +70,10 @@ const projectsData = [
   {
     id: 4,
     title: "NiteVale Corp",
-    description: "A spooky valentine template made to give to a special someone.",
+    description: "A spooky valentine template site made to give to a special someone.",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    tag: ["Web"],
+    tech: ["React", "Next.js"],
     gitUrl: "https://nitevalecorp.vercel.app/",
     projectImages : [
       '/images/projects/nitevale.png',
@@ -78,6 +81,19 @@ const projectsData = [
       '/images/projects/nitevale3.png'
     ]
   },
+  {
+    id: 5,
+    title: "Vehicle Fintess Tracker",
+    description: "A dashboard that analyzes electrical vehicle signals and displays a safety rating for drives.",
+    image: "/images/projects/2.png",
+    tag: ["Research Publication"],
+    tech: ["Python", "PyQT5"],
+    gitUrl: "https://ieeexplore.ieee.org/abstract/document/10485592",
+    projectImages : [
+      '/images/projects/Datavis1.png',
+    ]
+  },
+
 ];
 
 const ProjectsSection = () => {
@@ -163,7 +179,7 @@ const ProjectsSection = () => {
             </p>
             <p className={`${orbitron.className} text-[rgb(192,174,125)] text-center text-sm sm:text-sm mb-6 lg:text-sm`}>
               <a href="https://www.youtube.com/watch?v=N7RIxD4vraM&list=PLAqwaEpjgfVHvp4Zo8qynWMX_-8NejPwu&index=1" target="_blank" rel="noopener noreferrer">
-                Click for project demos.
+                Click on this text for project demos.
               </a>
             </p>
 
@@ -181,6 +197,7 @@ const ProjectsSection = () => {
                   description={projectsData[currentCardIndex].description}
                   imgUrl={projectsData[currentCardIndex].image}
                   tags={projectsData[currentCardIndex].tag}
+                  tech={projectsData[currentCardIndex].tech}
                   gitUrl={projectsData[currentCardIndex].gitUrl}
                   images={projectsData[currentCardIndex].projectImages}
                 />

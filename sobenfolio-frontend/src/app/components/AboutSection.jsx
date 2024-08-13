@@ -26,10 +26,17 @@ const TAB_DATA = [
       <ul className='list-disc pl-2'>
         <li>JavaScript</li>
         <li>React</li>
-        <li>Node.js</li>
+        <li>Node.js/Next.js/Vite.js</li>
         <li>Python</li>
-        <li>C++/C/C#</li>
-        <li>Html</li>
+        <li>C++</li>
+        <li>C</li>
+        <li>C#</li>
+        <li>PHP</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>Git Version Control</li>
+        <li>Database Management/MySQL</li>
+        <li>Data Structures</li>
       </ul>
     ),
   },
@@ -49,9 +56,9 @@ const TAB_DATA = [
       <ul className='list-disc pl-2'>
         <li>Gym</li>
         <li>Reading</li>
+        <li>Drawing (Currently working through Drawabox!)</li>
+        <li>Game Dev</li>
         <li>Terraria</li>
-        <li>Watcing Streams</li>
-        <li>Learning</li>
       </ul>
     ),
   },
@@ -143,7 +150,7 @@ const AboutSection = () => {
               About Me
             </h2>
             <p className={`${orbitron.className} md:text-lg text-center`}>
-                            I am Sobenna. A computer science student currently studying at Vanderbilt University. I believe greatly in the power of creativity, and hope to breathe that life into my projects!
+                            I am Sobenna. A computer science student at Vanderbilt University blending art and technical expertise to make engaging projects and expereinces.
             </p>
 
           </div>
